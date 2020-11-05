@@ -1,0 +1,336 @@
+.container{
+    width: 100%;
+    padding: 0 2%;
+    position: relative;
+}
+.serachOpen{
+    width: 0vw;
+    height: 100vh;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 70000;
+    top:0;
+    right: 0;
+    transition: width .5s;
+    overflow: hidden;
+
+        &.active{
+            width: 100vw; 
+        }
+        .close{
+            position: absolute;
+            top:15px;
+            right: 30px;
+            font-size: 1.7rem;
+            color: $color;
+            font-weight: 600;
+        }
+
+        input{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #999;
+            color: #999;
+            padding: 10px 5px;
+            font-size: 15px ;
+            outline: none;
+        }
+
+        button{
+            background-color: transparent;
+            border: none;
+            color: #999;
+            font-size: 19px;
+            font-weight: bold;
+            outline: none;
+            margin-top:8px;
+        }
+}
+header{
+    width: 100%;
+
+
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: $black;
+    &__logo a{
+        font-size: 1.9em; 
+        font-weight: 600;
+        height: 40px;
+        margin:0;  
+        position: relative;
+            span{
+                color: $logo-color-red;
+                font-size: .7rem;
+                   position: absolute;
+                   bottom:-7px;
+                   right: 0;
+                   text-transform: uppercase;
+ 
+            }
+    }
+
+    &__menu{ 
+        position:absolute;
+        width: 100%;
+        height: 0px; 
+        top: 55px;
+        background-color: $color;
+        overflow: hidden;
+        transition:height 1s;
+        z-index: 1000;
+         ul{
+           padding: 18px;
+
+            a{ 
+
+                color: #999; 
+                li{
+                    width: 120px; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between; 
+                    margin:10px 0;  
+                }
+            }
+            
+         }
+    }
+
+    &__menu.active{
+        width: 100%;
+        height: 180px;
+        
+    }
+
+    &__search{
+        max-width: 300px;
+        min-width: 150px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $color;
+        font-size: 1.2rem;
+            &--menu{
+                width: 95px;
+                height: 35px;
+                background-color: #222222;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 1rem;
+            }
+    }
+}  
+
+ #left, #right{
+    width: 60px;
+    height: 40px; 
+    background-color: $logo-color-red ;
+    border:5px solid $blue-bg ;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: absolute;
+    bottom: -50px; 
+    font-weight: bold;
+    font-size: 1.7rem; 
+    cursor: pointer;
+
+ } 
+
+ #right{
+    right: 4.5%;
+ } 
+ #left{
+    left: 4.5%;
+ }
+ 
+
+.content{
+    width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+    margin-top:30px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+
+        .card{
+            overflow: hidden;
+            width: 0;
+            height: 100%; 
+            display: flex;
+            align-items: flex-end;
+            transition: all 0.2s;
+
+            &__content--text{
+               width: 100%;
+                min-height: 250px;
+                padding: 10px;
+                color: $color;
+                background: linear-gradient(to bottom, rgba(0,0,0,.5) 90%,transparent ) ; 
+                 
+
+                    span{
+                        padding: 5px 10px;
+                        background-color: $logo-color-red; 
+                    }
+
+                    h2{
+                        font-size: 2.3rem;
+                    }
+
+                    p{
+                        max-width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis; 
+                        margin-bottom: 15px;
+                    }
+
+                    .btn{
+                        padding: 5px 10px;
+                        background-color: $logo-color-red;
+                        font-weight: 600;
+                    }
+            }
+        }
+
+        .card.active{ 
+            width: 100%;
+
+        } 
+        .card.active > .card__content--text{
+            animation: up 1s ease forwards;
+        }
+        .um{
+            background: url('../img/naruto-shippden.jpg') no-repeat center/cover;
+        }
+
+        .dois{
+            background: url('../img/shaman-king.jpg') no-repeat center/cover;
+        }
+  
+        .tres{
+            background: url('../img/jujutsu.jpg') no-repeat center/cover;
+        }
+}
+
+@media screen and (min-width: 840px){
+
+    .serachOpen{
+       
+            input{
+                width: 30%;
+                font-size: 30px ;
+            }
+    
+            button{
+                cursor: pointer;
+            }
+    }
+
+
+    .navbar{
+        padding: 0 5%; 
+
+        &__logo{
+            display: flex;
+            align-items: center;
+        }
+
+        &__menu{
+            position: initial; 
+            height: 70px;
+            background-color: transparent;
+
+            ul{ 
+                padding: 0;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                    a{
+                        height: 100%;
+                        display:flex;
+                        align-items: center;
+
+                        &.active{
+                            background-color: $logo-color-red;  
+                            font-weight: 600;
+                            color: $color;
+                        }
+                        &:hover{
+                            color: $color;
+                        }
+
+                        li{
+                            justify-content: center;
+
+                            i{
+                                margin: 5px;
+                            }
+                        }
+                        
+                    }
+            }
+        }
+
+        &__search{
+            width: 100px;
+            min-width: 30px;
+            &--menu{
+                display: none;
+            }
+        }
+    }
+    #left, #right{
+        height: 60px; 
+        transform: rotate(45deg);
+        top: 45%;
+        i{
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    .content{
+        width: 90%;
+        height: 85vh;
+        margin: 30px auto;
+            .card{
+                
+
+                &__content--text{
+                    h2{
+                        font-size: 4rem;
+                    }
+                    p{
+                        width: 100%;
+                        margin:0 0 30px 0;  
+                    }
+
+                    .btn{
+                        padding: 20px;
+                        font-size: 1.5rem;
+                        
+                    }
+                }
+            }
+
+            .card.active{
+                padding:60px 60px 0 60px;
+            }
+    }
+}

@@ -1,0 +1,97 @@
+.footer{
+    width: 100%;
+    padding: 20px 1.5%;
+    position: relative;
+    background-color: $blue-bold; 
+    margin-top:30px;
+        .to-top{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 40px;
+            top: -20px;
+            border-radius: 50%;
+            background-color: $logo-color-red;
+            border: 5px solid $black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 1.7rem;
+            font-weight: bold;
+            cursor: pointer;
+                i{
+                    position: relative;
+                    top:-20px;
+                    animation: showUp 1.5s 1s linear infinite;
+                }
+                i:first-child{
+                    top:8px;
+                    animation: showUp 1.5s  linear infinite;  
+
+                } 
+        }
+
+        .one{
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two{
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                ul{
+                    width: 100%;
+                    max-width: 500px;
+                    display:flex;
+                    justify-content: space-between;
+                }
+
+        }
+
+        .three{
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+                p{
+                    color: $color;
+                    text-align: center;
+                }
+
+        }
+}
+
+
+@media screen and (min-width: 840px){
+
+    .footer{
+        display: flex;
+        padding: 60px 5.5%;
+            .one{
+                justify-content: flex-start;
+                width: 350px;
+            }
+            .two{
+                width: 100%;
+            }
+            .three{
+                width: 500px;
+            }
+    }
+
+}
+
+
+@media screen and (min-width: 1040px){
+
+   
+
+}

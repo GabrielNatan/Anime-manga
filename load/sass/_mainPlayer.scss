@@ -1,0 +1,132 @@
+main{
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+.animePlayer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    animation: up .7s linear forwards;
+
+    &__title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $color;
+        padding: 30px 0 0 0;
+    }
+
+    &__video{
+        width: 100%;
+
+
+            video{
+                width: 80%;
+                margin:0 auto;
+                display: block;
+                outline: none;
+            }
+    }
+
+    &__episodios{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+            div{
+                border-radius: 15px;
+                padding: 15px;
+                background-color: $black;
+                margin: 10px auto;
+                width: 100%;
+                min-width: 270px;
+                height: 100%;
+                
+
+                    h3{
+                        font-size: 1.4rem;
+                        color: $color;
+                    }
+                    ul{
+                        display: flex;
+                        width: 100%;
+                        flex-wrap: wrap;
+                            li{
+                                margin: 10px 10px 10px 0;
+                                padding:10px 20px;
+                                border-radius: 3px;
+                                text-align: center;
+                                background-color: $blue-bold;
+                                color: $color;
+                                font-weight: bold; 
+                                cursor: pointer;
+                                    &:hover, &.active{
+                                        background-color: $logo-color-red;
+                                        color: $black;
+                                    }
+                            }
+
+
+                    }
+            }
+    }
+}
+
+
+@media screen and (min-width: 840px){
+
+
+    .animePlayer{
+       
+    
+    
+        &__episodios{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+                div{
+                    border-radius: 15px;
+                    padding: 15px;
+                    background-color: $black;
+                    margin: 10px auto;
+                    width: 45%;
+                    min-width: 270px;
+                    height: 100%;
+                    
+    
+                        h3{
+                            font-size: 1.4rem;
+                            color: $color;
+                        }
+                        ul{
+                            display: flex;
+                            width: 100%;
+                            flex-wrap: wrap;
+                                li{
+                                    margin: 10px 10px 10px 0;
+                                    padding:10px 20px;
+                                    border-radius: 3px;
+                                    text-align: center;
+                                    background-color: $blue-bold;
+                                    color: $color;
+                                    font-weight: bold; 
+                                    cursor: pointer;
+                                        &:hover, &.active{
+                                            background-color: $logo-color-red;
+                                            color: $black;
+                                        }
+                                }
+    
+    
+                        }
+                }
+        }
+    }
+
+}

@@ -1,0 +1,740 @@
+/**
+#070720
+#0B0C2A
+**/
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(-45px); }
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px); }
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box; }
+
+:root {
+  font-size: 62,5%; }
+
+a {
+  text-decoration: none;
+  color: #FFF; }
+
+ul {
+  list-style: none; }
+
+body {
+  background-color: #222; }
+
+.container {
+  width: 100%;
+  padding: 0 2%;
+  position: relative; }
+
+.serachOpen {
+  width: 0vw;
+  height: 100vh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 70000;
+  top: 0;
+  right: 0;
+  transition: width .5s;
+  overflow: hidden; }
+  .serachOpen.active {
+    width: 100vw; }
+  .serachOpen .close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 1.7rem;
+    color: #FFF;
+    font-weight: 600; }
+  .serachOpen input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    color: #999;
+    padding: 10px 5px;
+    font-size: 15px;
+    outline: none; }
+  .serachOpen button {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 19px;
+    font-weight: bold;
+    outline: none;
+    margin-top: 8px; }
+
+header {
+  width: 100%; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #191919; }
+  .navbar__logo a {
+    font-size: 1.9em;
+    font-weight: 600;
+    height: 40px;
+    margin: 0;
+    position: relative; }
+    .navbar__logo a span {
+      color: #f0ab44;
+      font-size: .7rem;
+      position: absolute;
+      bottom: -7px;
+      right: 0;
+      text-transform: uppercase; }
+  .navbar__menu {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 55px;
+    background-color: #FFF;
+    overflow: hidden;
+    transition: height 1s;
+    z-index: 1000; }
+    .navbar__menu ul {
+      padding: 18px; }
+      .navbar__menu ul a {
+        color: #999; }
+        .navbar__menu ul a li {
+          width: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 10px 0; }
+  .navbar__menu.active {
+    width: 100%;
+    height: 180px; }
+  .navbar__search {
+    max-width: 300px;
+    min-width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    font-size: 1.2rem; }
+    .navbar__search--menu {
+      width: 95px;
+      height: 35px;
+      background-color: #222222;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 1rem; }
+
+#left, #right {
+  width: 60px;
+  height: 40px;
+  background-color: #f0ab44;
+  border: 5px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  font-weight: bold;
+  font-size: 1.7rem;
+  cursor: pointer; }
+
+#right {
+  right: 4.5%; }
+
+#left {
+  left: 4.5%; }
+
+.content {
+  width: 100%;
+  height: 70vh;
+  border-radius: 5px;
+  margin-top: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap; }
+  .content .card {
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.2s; }
+    .content .card__content--text {
+      width: 100%;
+      min-height: 250px;
+      padding: 10px;
+      color: #FFF;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 90%, transparent); }
+      .content .card__content--text span {
+        padding: 5px 10px;
+        background-color: #f0ab44; }
+      .content .card__content--text h2 {
+        font-size: 2.3rem; }
+      .content .card__content--text p {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 15px; }
+      .content .card__content--text .btn {
+        padding: 5px 10px;
+        background-color: #f0ab44;
+        font-weight: 600; }
+  .content .card.active {
+    width: 100%; }
+  .content .card.active > .card__content--text {
+    animation: up 1s ease forwards; }
+  .content .um {
+    background: url("../img/naruto-shippden.jpg") no-repeat center/cover; }
+  .content .dois {
+    background: url("../img/shaman-king.jpg") no-repeat center/cover; }
+  .content .tres {
+    background: url("../img/jujutsu.jpg") no-repeat center/cover; }
+
+@media screen and (min-width: 840px) {
+  .serachOpen input {
+    width: 30%;
+    font-size: 30px; }
+  .serachOpen button {
+    cursor: pointer; }
+  .navbar {
+    padding: 0 5%; }
+    .navbar__logo {
+      display: flex;
+      align-items: center; }
+    .navbar__menu {
+      position: initial;
+      height: 70px;
+      background-color: transparent; }
+      .navbar__menu ul {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center; }
+        .navbar__menu ul a {
+          height: 100%;
+          display: flex;
+          align-items: center; }
+          .navbar__menu ul a.active {
+            background-color: #f0ab44;
+            font-weight: 600;
+            color: #FFF; }
+          .navbar__menu ul a:hover {
+            color: #FFF; }
+          .navbar__menu ul a li {
+            justify-content: center; }
+            .navbar__menu ul a li i {
+              margin: 5px; }
+    .navbar__search {
+      width: 100px;
+      min-width: 30px; }
+      .navbar__search--menu {
+        display: none; }
+  #left, #right {
+    height: 60px;
+    transform: rotate(45deg);
+    top: 45%; }
+    #left i, #right i {
+      transform: rotate(-45deg); }
+  .content {
+    width: 90%;
+    height: 85vh;
+    margin: 30px auto; }
+    .content .card__content--text h2 {
+      font-size: 4rem; }
+    .content .card__content--text p {
+      width: 100%;
+      margin: 0 0 30px 0; }
+    .content .card__content--text .btn {
+      padding: 20px;
+      font-size: 1.5rem; }
+    .content .card.active {
+      padding: 60px 60px 0 60px; } }
+
+.trending {
+  width: 100%;
+  margin-top: 60px;
+  padding: 0 1.5%;
+  display: flex;
+  flex-direction: column; }
+  .trending__content {
+    width: 100%;
+    display: block; }
+    .trending__content h1 {
+      display: block;
+      width: 100%;
+      padding: 5px 10px;
+      color: #FFF; }
+    .trending__content span {
+      display: block;
+      width: 100%;
+      padding: 5px 10px;
+      color: #FFF; }
+  .trending__cont {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap; }
+  .trending__card {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    border-radius: 5px;
+    margin: 10px auto 30px auto;
+    background: url("../img/naruto-shippden.jpg") no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    .trending__card .card_top {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(to bottom, #22222277 50%, transparent); }
+  .trending__text {
+    width: 80%;
+    padding: 10px;
+    background-color: #140d0d77;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px; }
+    .trending__text h3 {
+      margin: 5px 0; }
+    .trending__text a.btn, .trending__text .btn {
+      width: 100%;
+      padding: 5px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      background-color: #f0ab44;
+      display: block;
+      color: #191919;
+      text-align: center; }
+  .trending .aside {
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    color: #FFF; }
+    .trending .aside ul {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end; }
+      .trending .aside ul li {
+        margin-left: 10px;
+        margin-bottom: 10px; }
+    .trending .aside__cont {
+      background-color: #140d0d77;
+      padding: 10px; }
+    .trending .aside__card {
+      width: 100%;
+      height: 200px;
+      background: url("../img/naruto-shippden.jpg") no-repeat center/cover;
+      border-radius: 5px;
+      margin: 10px 0; }
+  .trending .new__card {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    border-radius: 0 5px 5px 0;
+    margin: 10px 0;
+    background-color: #222; }
+  .trending .new__image {
+    width: 30%;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background: url("../img/naruto-shippden.jpg") no-repeat center/cover; }
+  .trending .new__text {
+    width: 70%;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center; }
+    .trending .new__text span {
+      margin-top: 5px; }
+    .trending .new__text p {
+      font-size: .9rem;
+      white-space: pre-line;
+      height: 62px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-radius: 0 5px 5px 0;
+      margin: 5px 0; }
+  .trending .new__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: .7rem;
+    padding: 0px 5px 3px 5px;
+    border-radius: 5px;
+    background-color: #e64d4d; }
+
+@media screen and (min-width: 840px) {
+  .trending {
+    padding: 0 6%;
+    flex-direction: row; }
+    .trending div {
+      width: 90%; }
+    .trending__content {
+      width: 100%;
+      display: block; }
+      .trending__content h1 {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #FFF; }
+      .trending__content span {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #FFF; }
+    .trending .aside {
+      width: 50%; } }
+
+@media screen and (min-width: 1040px) {
+  .trending {
+    padding: 0 6%;
+    flex-direction: row; }
+    .trending div {
+      width: 100%; }
+    .trending__content {
+      width: 100%;
+      display: block; }
+      .trending__content h1 {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #FFF; }
+      .trending__content span {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #FFF; }
+    .trending__cont {
+      width: 100%;
+      padding: 0 10px;
+      display: flex;
+      flex-wrap: wrap; }
+    .trending__card {
+      width: 100%;
+      max-width: 250px;
+      height: 350px;
+      border-radius: 5px;
+      margin: 10px auto 30px 0;
+      background: url("../img/naruto-shippden.jpg") no-repeat center/cover;
+      position: relative; }
+      .trending__card .card_top {
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(to bottom, #22222277 50%, transparent); }
+    .trending__text {
+      margin: 0 10px; }
+    .trending .aside {
+      width: 35%; } }
+
+.footer {
+  width: 100%;
+  padding: 20px 1.5%;
+  position: relative;
+  background-color: #140d0d77;
+  margin-top: 30px; }
+  .footer .to-top {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 40px;
+    top: -20px;
+    border-radius: 50%;
+    background-color: #f0ab44;
+    border: 5px solid #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer; }
+    .footer .to-top i {
+      position: relative;
+      top: -20px;
+      animation: showUp 1.5s 1s linear infinite; }
+    .footer .to-top i:first-child {
+      top: 8px;
+      animation: showUp 1.5s  linear infinite; }
+  .footer .one {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer .two {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer .two ul {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      justify-content: space-between; }
+  .footer .three {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer .three p {
+      color: #FFF;
+      text-align: center; }
+
+@media screen and (min-width: 840px) {
+  .footer {
+    display: flex;
+    padding: 60px 5.5%; }
+    .footer .one {
+      justify-content: flex-start;
+      width: 350px; }
+    .footer .two {
+      width: 100%; }
+    .footer .three {
+      width: 500px; } }
+
+main {
+  max-width: 1580px;
+  margin: 0 auto; }
+
+.animePlayer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: up .7s linear forwards; }
+  .animePlayer__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFF;
+    padding: 30px 0 0 0; }
+  .animePlayer__video {
+    width: 100%; }
+    .animePlayer__video video {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      outline: none; }
+  .animePlayer__episodios {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .animePlayer__episodios div {
+      border-radius: 15px;
+      padding: 15px;
+      background-color: #191919;
+      margin: 10px auto;
+      width: 100%;
+      min-width: 270px;
+      height: 100%; }
+      .animePlayer__episodios div h3 {
+        font-size: 1.4rem;
+        color: #FFF; }
+      .animePlayer__episodios div ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap; }
+        .animePlayer__episodios div ul li {
+          margin: 10px 10px 10px 0;
+          padding: 10px 20px;
+          border-radius: 3px;
+          text-align: center;
+          background-color: #140d0d77;
+          color: #FFF;
+          font-weight: bold;
+          cursor: pointer; }
+          .animePlayer__episodios div ul li:hover, .animePlayer__episodios div ul li.active {
+            background-color: #f0ab44;
+            color: #191919; }
+
+@media screen and (min-width: 840px) {
+  .animePlayer__episodios {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .animePlayer__episodios div {
+      border-radius: 15px;
+      padding: 15px;
+      background-color: #191919;
+      margin: 10px auto;
+      width: 45%;
+      min-width: 270px;
+      height: 100%; }
+      .animePlayer__episodios div h3 {
+        font-size: 1.4rem;
+        color: #FFF; }
+      .animePlayer__episodios div ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap; }
+        .animePlayer__episodios div ul li {
+          margin: 10px 10px 10px 0;
+          padding: 10px 20px;
+          border-radius: 3px;
+          text-align: center;
+          background-color: #140d0d77;
+          color: #FFF;
+          font-weight: bold;
+          cursor: pointer; }
+          .animePlayer__episodios div ul li:hover, .animePlayer__episodios div ul li.active {
+            background-color: #f0ab44;
+            color: #191919; } }
+
+.comentarios {
+  width: 100%;
+  padding: 15px 8%;
+  margin-top: 30px; }
+  .comentarios__cont {
+    width: 100%;
+    height: 100%;
+    padding: 15px; }
+    .comentarios__cont h1 {
+      font-size: 1.5rem;
+      color: #FFF;
+      margin-bottom: 30px; }
+  .comentarios__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; }
+  .comentarios__image {
+    width: 120px;
+    height: 120px;
+    background: url("../img/naruto-shippden.jpg") no-repeat center/cover;
+    border-radius: 100%;
+    margin-right: 20px; }
+  .comentarios__text {
+    background-color: #191919;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    width: 100%; }
+    .comentarios__text small {
+      color: #f0ab44; }
+  .comentarios__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    margin-top: 100px; }
+    .comentarios__form label {
+      margin-bottom: 10px; }
+    .comentarios__form input {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      width: 100%; }
+    .comentarios__form textarea {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      width: 100%; }
+    .comentarios__form .btn-send {
+      width: 100%;
+      padding: 10px;
+      font-weight: bold;
+      background-color: #f0ab44; }
+
+@media screen and (min-width: 840px) {
+  .comentarios__text {
+    width: 85%; }
+  .comentarios__form .btn-send {
+    font-size: 2rem; } }
+
+.pageSearch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .pageSearch__title {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 60px; }
+  .pageSearch__cont {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto; }
+
+.banner__login {
+  width: 100%;
+  height: 600px;
+  background: url("../img/shaman-king.jpg") no-repeat center/cover;
+  margin-bottom: -31px;
+  filter: brightness(30%);
+  color: #FFF; }
+
+.login {
+  width: 80%;
+  max-width: 420px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .login input {
+    margin: 10px 0;
+    width: 300px;
+    padding: 10px;
+    border-radius: 3px; }
+  .login .btn-login {
+    margin: 10px 0;
+    width: 300px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #f0ab44;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer; }

@@ -1,0 +1,42 @@
+.banner__login{
+    width: 100%;
+    height: 600px;
+    background: url('../img/shaman-king.jpg') no-repeat center/cover;
+    margin-bottom: -31px;
+    filter: brightness(30%);
+    color: $color; 
+}
+
+.login{
+    width: 80%;
+    max-width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,.7);
+    padding: 15px;
+    color: $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input{
+        margin: 10px 0;
+        width: 300px;
+        padding: 10px;
+        border-radius: 3px;
+    }
+
+    .btn-login{
+        margin: 10px 0;
+        width: 300px;
+        padding: 10px;
+        border-radius: 3px;
+        background-color: $logo-color-red;
+        font-weight: bold;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+}

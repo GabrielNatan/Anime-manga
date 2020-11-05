@@ -1,0 +1,24 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+    border:none;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size:62,5%;
+}
+
+a{
+    text-decoration: none;
+    color: $color;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: $blue-bg;
+}

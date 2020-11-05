@@ -1,0 +1,16 @@
+{
+  "name": "01-anime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass load/sass/ -o src/css/ -w"
+  },
+  "keywords": [],
+  "author": "Gabriel Natan",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
