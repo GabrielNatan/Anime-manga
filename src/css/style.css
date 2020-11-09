@@ -18,6 +18,18 @@
     opacity: 1;
     transform: translateY(0px); } }
 
+@keyframes moveRight {
+  from {
+    transform: translate(0px) rotate(-45deg); }
+  to {
+    transform: translate(3px, -3px) rotate(-45deg); } }
+
+@keyframes moveLeft {
+  from {
+    transform: translate(0px) rotate(-45deg); }
+  to {
+    transform: translate(-3px, 3px) rotate(-45deg); } }
+
 * {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -30,13 +42,14 @@
 
 a {
   text-decoration: none;
-  color: #FFF; }
+  color: #f8f8f8; }
 
 ul {
   list-style: none; }
 
 body {
-  background-color: #222; }
+  background-color: #222;
+  scroll-behavior: smooth; }
 
 .container {
   width: 100%;
@@ -63,7 +76,7 @@ body {
     top: 15px;
     right: 30px;
     font-size: 1.7rem;
-    color: #FFF;
+    color: #f8f8f8;
     font-weight: 600; }
   .serachOpen input {
     background-color: transparent;
@@ -108,7 +121,7 @@ header {
     width: 100%;
     height: 0px;
     top: 55px;
-    background-color: #FFF;
+    background-color: #f8f8f8;
     overflow: hidden;
     transition: height 1s;
     z-index: 1000; }
@@ -132,7 +145,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #FFF;
+    color: #f8f8f8;
     font-size: 1.2rem; }
     .navbar__search--menu {
       width: 95px;
@@ -160,9 +173,13 @@ header {
 
 #right {
   right: 4.5%; }
+  #right:hover > i {
+    animation: moveRight .5s  alternate infinite; }
 
 #left {
   left: 4.5%; }
+  #left:hover > i {
+    animation: moveLeft .5s  alternate infinite; }
 
 .content {
   width: 100%;
@@ -183,7 +200,7 @@ header {
       width: 100%;
       min-height: 250px;
       padding: 10px;
-      color: #FFF;
+      color: #f8f8f8;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 90%, transparent); }
       .content .card__content--text span {
         padding: 5px 10px;
@@ -240,9 +257,9 @@ header {
           .navbar__menu ul a.active {
             background-color: #f0ab44;
             font-weight: 600;
-            color: #FFF; }
+            color: #f8f8f8; }
           .navbar__menu ul a:hover {
-            color: #FFF; }
+            color: #f8f8f8; }
           .navbar__menu ul a li {
             justify-content: center; }
             .navbar__menu ul a li i {
@@ -286,12 +303,12 @@ header {
       display: block;
       width: 100%;
       padding: 5px 10px;
-      color: #FFF; }
+      color: #f8f8f8; }
     .trending__content span {
       display: block;
       width: 100%;
       padding: 5px 10px;
-      color: #FFF; }
+      color: #f8f8f8; }
   .trending__cont {
     width: 100%;
     padding: 0 10px;
@@ -316,7 +333,7 @@ header {
     width: 80%;
     padding: 10px;
     background-color: #140d0d77;
-    color: #FFF;
+    color: #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,7 +354,7 @@ header {
     width: 100%;
     min-height: 100%;
     display: block;
-    color: #FFF; }
+    color: #f8f8f8; }
     .trending .aside ul {
       width: 100%;
       display: flex;
@@ -346,8 +363,12 @@ header {
         margin-left: 10px;
         margin-bottom: 10px; }
     .trending .aside__cont {
+      width: 100%;
       background-color: #140d0d77;
-      padding: 10px; }
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
     .trending .aside__card {
       width: 100%;
       height: 200px;
@@ -380,7 +401,7 @@ header {
     .trending .new__text p {
       font-size: .9rem;
       white-space: pre-line;
-      height: 62px;
+      height: 60px;
       overflow: hidden;
       text-overflow: ellipsis;
       border-radius: 0 5px 5px 0;
@@ -390,8 +411,8 @@ header {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 10px;
+    top: -8px;
     font-size: .7rem;
     padding: 0px 5px 3px 5px;
     border-radius: 5px;
@@ -410,12 +431,12 @@ header {
         display: block;
         width: 100%;
         padding: 5px 10px;
-        color: #FFF; }
+        color: #f8f8f8; }
       .trending__content span {
         display: block;
         width: 100%;
         padding: 5px 10px;
-        color: #FFF; }
+        color: #f8f8f8; }
     .trending .aside {
       width: 50%; } }
 
@@ -432,12 +453,12 @@ header {
         display: block;
         width: 100%;
         padding: 5px 10px;
-        color: #FFF; }
+        color: #f8f8f8; }
       .trending__content span {
         display: block;
         width: 100%;
         padding: 5px 10px;
-        color: #FFF; }
+        color: #f8f8f8; }
     .trending__cont {
       width: 100%;
       padding: 0 10px;
@@ -513,7 +534,7 @@ header {
     justify-content: center;
     align-items: center; }
     .footer .three p {
-      color: #FFF;
+      color: #f8f8f8;
       text-align: center; }
 
 @media screen and (min-width: 840px) {
@@ -545,7 +566,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #FFF;
+    color: #f8f8f8;
     padding: 30px 0 0 0; }
   .animePlayer__video {
     width: 100%; }
@@ -569,7 +590,7 @@ main {
       height: 100%; }
       .animePlayer__episodios div h3 {
         font-size: 1.4rem;
-        color: #FFF; }
+        color: #f8f8f8; }
       .animePlayer__episodios div ul {
         display: flex;
         width: 100%;
@@ -580,7 +601,7 @@ main {
           border-radius: 3px;
           text-align: center;
           background-color: #140d0d77;
-          color: #FFF;
+          color: #f8f8f8;
           font-weight: bold;
           cursor: pointer; }
           .animePlayer__episodios div ul li:hover, .animePlayer__episodios div ul li.active {
@@ -603,7 +624,7 @@ main {
       height: 100%; }
       .animePlayer__episodios div h3 {
         font-size: 1.4rem;
-        color: #FFF; }
+        color: #f8f8f8; }
       .animePlayer__episodios div ul {
         display: flex;
         width: 100%;
@@ -614,7 +635,7 @@ main {
           border-radius: 3px;
           text-align: center;
           background-color: #140d0d77;
-          color: #FFF;
+          color: #f8f8f8;
           font-weight: bold;
           cursor: pointer; }
           .animePlayer__episodios div ul li:hover, .animePlayer__episodios div ul li.active {
@@ -631,7 +652,7 @@ main {
     padding: 15px; }
     .comentarios__cont h1 {
       font-size: 1.5rem;
-      color: #FFF;
+      color: #f8f8f8;
       margin-bottom: 30px; }
   .comentarios__card {
     display: flex;
@@ -651,7 +672,7 @@ main {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    color: #FFF;
+    color: #f8f8f8;
     width: 100%; }
     .comentarios__text small {
       color: #f0ab44; }
@@ -659,7 +680,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    color: #FFF;
+    color: #f8f8f8;
     margin-top: 100px; }
     .comentarios__form label {
       margin-bottom: 10px; }
@@ -695,7 +716,7 @@ main {
     width: 100%;
     padding: 15px;
     text-align: center;
-    color: #FFF;
+    color: #f8f8f8;
     margin-bottom: 60px; }
   .pageSearch__cont {
     width: 100%;
@@ -708,7 +729,7 @@ main {
   background: url("../img/shaman-king.jpg") no-repeat center/cover;
   margin-bottom: -31px;
   filter: brightness(30%);
-  color: #FFF; }
+  color: #f8f8f8; }
 
 .login {
   width: 80%;
@@ -719,22 +740,72 @@ main {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 15px;
-  color: #FFF;
+  color: #f8f8f8;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .login span {
+    width: 80%;
+    margin: 0 auto; }
   .login input {
+    width: 100%;
     margin: 10px 0;
-    width: 300px;
+    max-width: 320px;
     padding: 10px;
     border-radius: 3px; }
   .login .btn-login {
+    width: 80%;
     margin: 10px 0;
-    width: 300px;
+    max-width: 320px;
     padding: 10px;
     border-radius: 3px;
     background-color: #f0ab44;
     font-weight: bold;
     font-size: 1.3rem;
     cursor: pointer; }
+
+.contato {
+  width: 100%;
+  height: 600px;
+  background: url("../img/jujutsu.jpg") no-repeat center/cover;
+  margin-bottom: -31px;
+  color: #f8f8f8; }
+  .contato .blur {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .contato .contato__form {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 740px; }
+    .contato .contato__form input, .contato .contato__form textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      margin: 10px 0; }
+    .contato .contato__form .btn {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      margin: 10px 0;
+      background-color: #f0ab44;
+      font-size: 1.5rem;
+      font-weight: bold; }
+
+@media screen and (min-width: 840px) {
+  .contato .contato__form {
+    top: 18%;
+    left: 16%; } }
+
+@media screen and (min-width: 1040px) {
+  .contato .contato__form {
+    top: 25%;
+    left: 25%; } }

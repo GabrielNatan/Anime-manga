@@ -1,27 +1,4 @@
-/*
 
-function openBanner(bannerAll,left ){
-    let arrayBanner = [...bannerAll]
-    
-    
-    setInterval(()=>{
-        if(i >= 2){
-            i = 0;
-        }else{
-            i++
-        }
-        left.addEventListener('click', ()=>{
-            i = 1;
-            console.log(i)
-        })
-        
-        for(let a = 0; a<3; a++){
-            arrayBanner[a].classList.remove('active')
-        }
-        arrayBanner[i].classList.add('active')
-        
-    },3500)
-}*/
 
 class bannerHeader{
      constructor(){

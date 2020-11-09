@@ -150,9 +150,15 @@ header{
 
  #right{
     right: 4.5%;
+    &:hover > i{
+        animation: moveRight .5s  alternate infinite;
+    }
  } 
  #left{
     left: 4.5%;
+    &:hover > i{
+        animation: moveLeft .5s  alternate infinite;
+    }
  }
  
 
@@ -302,6 +308,8 @@ header{
         i{
             transform: rotate(-45deg);
         }
+
+        
 
     }
 

@@ -1,0 +1,62 @@
+.contato{
+    width: 100%;
+    height: 600px;  
+    background: url('../img/jujutsu.jpg') no-repeat center/cover;
+    margin-bottom: -31px;
+    color: $color; 
+
+        .blur{
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: rgba($color: #000000, $alpha: .3);
+        }
+
+        .contato__form{
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            background-color: rgba($color: #000000, $alpha: .9);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 740px;
+                
+                input, textarea{
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 3px;
+                    margin: 10px 0;
+                }
+
+                .btn{
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 3px;
+                    margin: 10px 0;
+                    background-color: $logo-color-red; 
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+        }
+}
+
+
+@media screen and (min-width: 840px){
+    .contato{
+        .contato__form{
+            top: 18%;
+            left: 16%;
+        }
+    }
+}
+
+@media screen and (min-width: 1040px){
+    .contato{
+        .contato__form{
+            top: 25%;
+            left: 25%;
+        }
+    }
+}

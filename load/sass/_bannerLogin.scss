@@ -21,17 +21,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    span{
+        width: 80%;
+        margin: 0 auto;
+    }
     input{
+        width: 100%;
         margin: 10px 0;
-        width: 300px;
+        max-width: 320px;
         padding: 10px;
-        border-radius: 3px;
+        border-radius: 3px; 
     }
 
     .btn-login{
+        width: 80%;
         margin: 10px 0;
-        width: 300px;
+        max-width: 320px;
         padding: 10px;
         border-radius: 3px;
         background-color: $logo-color-red;
@@ -40,3 +45,5 @@
         cursor: pointer;
     }
 }
+
+ 

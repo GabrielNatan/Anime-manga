@@ -63,6 +63,72 @@ let animes = [
         'categoria': 'fantasia',
         'temporadas': 13
 
+    },
+    {
+        'id': 7,
+        'name': 'Hunter x Hunter',
+        'episodios': "170",
+        'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehenipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen.',
+        'nota': 9,
+        'image':'hunter-hunter.jpg',
+        'categoria': 'fantasia',
+        'temporadas': 2
+
+    },
+    {
+        'id': 8,
+        'name': 'Bleach',
+        'episodios': "70",
+        'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehenipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen.',
+        'nota':8,
+        'image':'bleach.jpg',
+        'categoria': 'guerra',
+        'temporadas': 1
+
+    },
+    {
+        'id': 9,
+        'name': 'Yu yu ha',
+        'episodios': "200",
+        'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehenipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen.',
+        'nota': 10,
+        'image':'yuyu.jpg',
+        'categoria': 'fantasia',
+        'temporadas': 3
+
+    },
+    {
+        'id': 10,
+        'name': 'One punch man',
+        'episodios': "50",
+        'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehenipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen.',
+        'nota': 10,
+        'image':'one-punch-man.jpg',
+        'categoria': 'fantasia',
+        'temporadas': 2
+
+    },
+    {
+        'id': 11,
+        'name': 'Boruto',
+        'episodios': "50",
+        'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehenipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen.',
+        'nota': 10,
+        'image':'boruto.jpg',
+        'categoria': 'fantasia',
+        'temporadas': 2
+
+    },
+    {
+        'id': 12,
+        'name': 'Cavaleiros do zodiaco',
+        'episodios': "350",
+        'description': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehenipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen ipsum, dolor sit amet consectetur adipisicing elit. Fugit, reiciendis quasi reprehen.',
+        'nota': 10,
+        'image':'cdz.jpg',
+        'categoria': 'fantasia',
+        'temporadas': 7
+
     }
 ]
 

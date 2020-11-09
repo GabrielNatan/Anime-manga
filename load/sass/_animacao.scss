@@ -23,3 +23,27 @@
 
     }
 }
+
+
+@keyframes moveRight{
+    from{
+        transform: translate(0px) rotate(-45deg); 
+        
+    }
+    to{
+        transform: translate(3px,-3px) rotate(-45deg);    
+    }
+}
+
+
+@keyframes moveLeft{
+    from{
+        transform: translate(0px) rotate(-45deg); 
+        
+    }
+    to{
+        transform: translate(-3px,3px) rotate(-45deg);    
+    }
+}
+
+
