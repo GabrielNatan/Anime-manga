@@ -112,6 +112,32 @@ class Card{
         }
     }
 
+
+    search(item){
+        
+        item.map(cada =>{
+            console.log(cada.name)
+            let cardModel = `
+                <div class="trending__card" style=" background: url('./src/img/${cada.image}') no-repeat center/cover">
+                    <div class="card_top">
+                        <span class="tag">${cada.categoria}</span>
+                        <span>${cada.temporadas} Temp. | ${cada.episodios} Episodios </span>
+                    </div>
+                    <div class="trending__text">
+                        <h3>${cada.name}</h3>
+                        <a href="/player.html" data-name="${cada.name}" class="btn">Watch Now</a>
+                    </div>
+                </div>
+        `
+
+        this.cardContainer.innerHTML += cardModel;
+
+        })
+
+        
+
+    }
+
 }
 
 export default new Card();
