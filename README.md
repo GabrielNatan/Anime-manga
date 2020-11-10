@@ -1,4 +1,3 @@
-# Anime-manga
 <h1 align="center">
     <img src="src/img/favicon.png" width="50">  
      Anime - Manga
@@ -17,14 +16,14 @@ Preview
     Preview Desktop
     <br>
     <br>
-    <img  src="assets/img/Cheff.gif">
+    <img  src="src/img/anime-manga-desk.gif">
 </h2>
 
 <h2 align="center">
     Preview Mobile
     <br>
     <br>
-    <img  src="assets/img/Cheff-mobile.gif">
+       <img  src="src/img/anime-manga-mob.gif">
 </h2>
 
 
